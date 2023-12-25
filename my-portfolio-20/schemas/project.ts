@@ -18,6 +18,15 @@ export default defineType({
       options: {hotspot: true},
     }),
     defineField({
+      name: 'video',
+      title: 'Video',
+      type: 'file',
+      description: 'Upload the video file here',
+      options: {
+        accept: 'video/*', // Restrict to video files
+      },
+    }),
+    defineField({
       name: 'summary',
       title: 'Summary',
       type: 'text',
