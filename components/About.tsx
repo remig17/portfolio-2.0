@@ -33,15 +33,27 @@ export default function About({}: Props) {
           background
         </h4>
         <p className="text-base">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-          quas, animi eaque ipsum nostrum dolor aperiam sint natus reprehenderit
-          recusandae ipsa nemo delectus facilis fuga iure dignissimos tenetur
-          neque alias. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          At recusandae praesentium, porro cum quo alias inventore. Eligendi
-          nemo labore necessitatibus qui tempora laborum voluptates, quas quam
-          eos doloremque, aperiam ea. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Corrupti, facilis? Vitae, non quae. Ad, explicabo ex
-          consequuntur laudantium iste amet! Nostrum quos autem deleniti
+          As a self-taught Full Stack JavaScript developer, I embarked on my
+          coding journey fueled by curiosity and a passion for technology. Over
+          time, I honed my skills through various educational pursuits,
+          ultimately achieving a level equivalent to a Bachelor&apos;s degree.
+          My specialization lies in the dynamic world of JavaScript, and I have
+          a particular affinity for the MERN (MongoDB, Express.js, React,
+          Node.js) stack. The modernity and expansive capabilities of this
+          technology stack have captivated me, motivating me to delve deeper
+          into its intricacies. Remaining at the forefront of emerging
+          technologies is a commitment I hold dear. I am genuinely fascinated by
+          the ever-evolving landscape of web development. My focus extends to
+          creating mobile applications and dynamic web interfaces that are not
+          only modern but also high-performing. In my development journey, I
+          strive to deliver applications with a polished user experience (UX)
+          and a visually appealing user interface (UI). I take pride in crafting
+          modern and sleek designs while ensuring the backend is robust,
+          providing a solid foundation for the application&apos;s data. In
+          summary, I am a dedicated Full Stack JavaScript developer with a
+          comprehensive understanding of the MERN stack. My passion lies in
+          leveraging cutting-edge technologies to build applications that are
+          not just functional but also visually impressive and user-friendly.
           provident at ipsa distinctio laboriosam iusto.
         </p>
       </div>

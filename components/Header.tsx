@@ -3,9 +3,42 @@ import React from "react";
 import Link from "next/link";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
+import { sanityClient } from "@/my-portfolio-20/sanity";
+import { groq } from "next-sanity";
+import { useState, useEffect } from "react";
+import { Social } from "@/typings";
+
 type Props = {};
 
+async function getData() {
+  try {
+    const data = await sanityClient.fetch(groq`*[_type == "pageInfo"][0]{
+      ...,
+      socials[]->{
+        _id,
+        title,
+        url
+      }
+    }`);
+    console.log(data); // Add this line
+    return data;
+  } catch (error) {
+    console.error("error fetching data", error);
+  }
+}
+
 export default function Header({}: Props) {
+  const [socials, setSocials] = useState<Social[]>([]); // Assurez-vous que le type correspond à votre interface Social
+  useEffect(() => {
+    getData()
+      .then((data) => {
+        setSocials(data.socials); // Update this line
+      })
+      .catch((err) => {
+        console.error("error fetching data", err);
+      });
+  }, []);
+
   return (
     <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center">
       <motion.div
@@ -15,26 +48,16 @@ export default function Header({}: Props) {
         className="flex flex-row items-center"
       >
         {/* social Icons */}
-        <SocialIcon
-          url="https://www.linkedin.com/in/remi-gallois-b7a55a206"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          url="https://github.com/remig17"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          url="https://www.instagram.com/"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          url="https://vercel.com"
-          fgColor="gray"
-          bgColor="transparent"
-        />
+
+        {socials?.map &&
+          socials.map((item, index) => (
+            <SocialIcon
+              key={index}
+              url={item.url}
+              fgColor="gray"
+              bgColor="transparent"
+            />
+          ))}
       </motion.div>
 
       <motion.div
