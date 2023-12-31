@@ -41,13 +41,18 @@ export default function Skills({ skills }: Props) {
         Skills
       </h3>
       <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm">
-        Hover over a skill for currency proficiency
+        Hover over a skill for current proficiency
       </h3>
       <div className="">
         <div className=" grid grid-cols-5 gap-7 h-[65vh]">
-          {renderedSkills.map((skill) => (
+          {renderedSkills?.slice(0, renderedSkills.length / 2).map((skill) => (
             <SkillComponent key={skill._id} skill={skill} />
           ))}
+          {renderedSkills
+            ?.slice(renderedSkills.length / 2, renderedSkills.length)
+            .map((skill) => (
+              <SkillComponent key={skill._id} skill={skill} directionLeft />
+            ))}
         </div>
       </div>
     </motion.div>

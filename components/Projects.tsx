@@ -14,7 +14,8 @@ export default function Projects({ projects }: Props) {
 
   useEffect(() => {
     const fetchData = async () => {
-      const query = groq`*[_type == "project"]`;
+      const query = groq`*[_type == "project"] | order(_createdAt desc)
+      `;
 
       try {
         const data = await sanityClient.fetch(query);
