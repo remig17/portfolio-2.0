@@ -8,14 +8,10 @@ import Projects from "../components/Projects";
 import ContactMe from "../components/ContactMe";
 import Link from "next/link";
 
-import { PageInfo, Skill, Experience, Project, Social } from "@/typings";
+import { Experience } from "@/typings";
 
 type Props = {
-  pageInfo?: PageInfo;
   experiences?: Experience[];
-  skills?: Skill[];
-  projects?: Project[];
-  socials?: Social[];
 };
 
 const Home: React.FC<Props> = ({ experiences }) => {
