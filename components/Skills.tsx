@@ -16,7 +16,7 @@ export default function Skills({ skills }: Props) {
 
   useEffect(() => {
     const fetchData = async () => {
-      const query = groq`*[_type == "skill"] | order(_createdAt asc)
+      const query = groq`*[_type == "skill"] | order(_createdAt desc)
       `;
 
       try {
