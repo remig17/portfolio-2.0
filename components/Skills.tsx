@@ -16,7 +16,8 @@ export default function Skills({ skills }: Props) {
 
   useEffect(() => {
     const fetchData = async () => {
-      const query = groq`*[_type == "skill"]`;
+      const query = groq`*[_type == "skill"] | order(_createdAt asc)
+      `;
 
       try {
         const data = await sanityClient.fetch(query);
