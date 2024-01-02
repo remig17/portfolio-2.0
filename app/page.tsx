@@ -1,20 +1,14 @@
 import Head from "next/head";
-import Header from "../components/Header";
-import Hero from "../components/Hero";
-import About from "../components/About";
-import WorkExperience from "../components/WorkExperience";
-import Skills from "../components/Skills";
-import Projects from "../components/Projects";
-import ContactMe from "../components/ContactMe";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import WorkExperience from "@/components/WorkExperience";
+import Skills from "@/components/Skills";
+import Projects from "@/components/Projects";
+import ContactMe from "@/components/ContactMe";
 import Link from "next/link";
 
-import { Experience } from "@/typings";
-
-type Props = {
-  experiences?: Experience[];
-};
-
-const Home: React.FC<Props> = ({ experiences }) => {
+export default function Home() {
   return (
     <div className="bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#5F00BA]/80">
       <Head>
@@ -30,7 +24,7 @@ const Home: React.FC<Props> = ({ experiences }) => {
         <About />
       </section>
       <section id="experience" className="snap-center">
-        <WorkExperience experiences={experiences} />
+        <WorkExperience />
       </section>
 
       <section id="skills" className="snap-start">
@@ -56,6 +50,4 @@ const Home: React.FC<Props> = ({ experiences }) => {
       </Link>
     </div>
   );
-};
-
-export default Home;
+}
