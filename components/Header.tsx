@@ -27,7 +27,7 @@ async function getData() {
   }
 }
 
-export default function Header({}: Props) {
+export default function Header() {
   const [socials, setSocials] = useState<Social[]>([]); // Assurez-vous que le type correspond à votre interface Social
   useEffect(() => {
     getData()

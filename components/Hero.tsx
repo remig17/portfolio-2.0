@@ -4,9 +4,8 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import Image from "next/image";
 import BackgroundCircles from "./BackgroundCircles";
 import Link from "next/link";
-type Props = {};
 
-export default function Hero({}: Props) {
+export default function Hero() {
   const [text, count] = useTypewriter({
     words: [
       "Hi, my name is Rémi",
