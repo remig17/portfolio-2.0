@@ -9,7 +9,7 @@ type Inputs = {
   message: string;
 };
 
-export default function ContactMe({}: Props) {
+export default function ContactMe() {
   const {
     register,
     handleSubmit,
