@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-import { Skill } from "@/typings";
-import { urlFor } from "@/my-portfolio-20/sanity";
+import { Skill } from "../typings";
+import { urlFor } from "../my-portfolio-20/sanity";
 
 type Props = { directionLeft?: boolean; skill: Skill };
 

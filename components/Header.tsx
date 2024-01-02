@@ -3,10 +3,10 @@ import React from "react";
 import Link from "next/link";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
-import { sanityClient } from "@/my-portfolio-20/sanity";
+import { sanityClient } from "../my-portfolio-20/sanity";
 import { groq } from "next-sanity";
 import { useState, useEffect } from "react";
-import { Social } from "@/typings";
+import { Social } from "../typings";
 
 type Props = {};
 

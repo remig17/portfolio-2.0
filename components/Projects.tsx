@@ -3,9 +3,9 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { sanityClient, urlFor } from "@/my-portfolio-20/sanity";
+import { sanityClient, urlFor } from "../my-portfolio-20/sanity";
 import { groq } from "next-sanity";
-import { Project } from "@/typings";
+import { Project } from "../typings";
 
 type Props = { projects?: Project[] };
 

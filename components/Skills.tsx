@@ -2,10 +2,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import SkillComponent from "./SkillComponent";
-import { sanityClient } from "@/my-portfolio-20/sanity";
+import { sanityClient } from "../my-portfolio-20/sanity";
 import { groq } from "next-sanity";
 import { useEffect, useState } from "react";
-import { Skill } from "@/typings";
+import { Skill } from "../typings";
 
 type Props = {
   skills?: Skill[];

@@ -2,9 +2,9 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import ExperienceCard from "./ExperienceCard";
-import { sanityClient } from "@/my-portfolio-20/sanity";
+import { sanityClient } from "../my-portfolio-20/sanity";
 import { groq } from "next-sanity";
-import { Experience } from "@/typings";
+import { Experience } from "../typings";
 
 type Props = {
   experiences?: Experience[]; // Make experiences optional since they can be provided as a prop

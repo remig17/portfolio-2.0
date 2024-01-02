@@ -2,8 +2,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Experience } from "@/typings";
-import { urlFor } from "@/my-portfolio-20/sanity";
+import { Experience } from "../typings";
+import { urlFor } from "../my-portfolio-20/sanity";
 
 type Props = {
   experience: Experience;
